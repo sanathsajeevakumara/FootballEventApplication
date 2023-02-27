@@ -3,4 +3,6 @@
     <string name="http_exception">An Unexpected error occurred.</string>
     <string name="connection_exception">Could not reach the server, Please check you internet connection.</string>
     <string name="team_logo">Team Image</string>
+    <string name="previous_match">Previous Match</string>
+    <string name="upcooming_match">Up Coming Match</string>
 </resources>

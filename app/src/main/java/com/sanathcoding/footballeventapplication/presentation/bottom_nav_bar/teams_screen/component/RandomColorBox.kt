@@ -3,13 +3,13 @@ package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.te
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
@@ -22,18 +22,20 @@ import com.sanathcoding.footballeventapplication.domain.model.teams.Team
 fun RandomColorBox(
     team: Team,
 ) {
-    Box(
+    Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
             .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colors.primary)
-            .padding(8.dp)
+            .background(MaterialTheme.colors.background),
+        backgroundColor = MaterialTheme.colors.background,
+        shape = RoundedCornerShape(10.dp),
+        elevation = 10.dp
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.SpaceBetween
+            verticalArrangement = Arrangement.SpaceAround
         ) {
             GlideImage(
                 model = team.logo,
@@ -47,7 +49,6 @@ fun RandomColorBox(
             Text(
                 text = team.name,
                 style = MaterialTheme.typography.h6,
-                color = Color.Black,
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
             )
