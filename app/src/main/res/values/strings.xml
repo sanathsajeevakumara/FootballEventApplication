@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Football Event Application</string>
+    <string name="http_exception">An Unexpected error occurred.</string>
+    <string name="connection_exception">Could not reach the server, Please check you internet connection.</string>
 </resources>
