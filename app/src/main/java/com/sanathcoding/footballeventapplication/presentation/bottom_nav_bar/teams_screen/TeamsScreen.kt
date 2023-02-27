@@ -22,6 +22,7 @@ import androidx.navigation.NavController
 import androidx.wear.compose.material.CircularProgressIndicator
 import androidx.wear.compose.material.Text
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component.RandomColorBox
+import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
 
 @Composable
 fun TeamsScreen(
@@ -50,7 +51,12 @@ fun TeamsScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             items(state.team) { team ->
-                RandomColorBox(team = team)
+                RandomColorBox(
+                    team = team,
+                    onTeamClick = {
+                        navController.navigate(Screen.TeamDetailScreen.route + "/${team.id}")
+                    }
+                )
             }
         }
         if (state.error.isNotBlank())

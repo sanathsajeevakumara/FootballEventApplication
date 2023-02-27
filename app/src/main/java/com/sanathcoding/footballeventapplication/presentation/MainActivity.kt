@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.MatchScreen
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.TeamsScreen
+import com.sanathcoding.footballeventapplication.presentation.navigation.SetUpNavGraph
 import com.sanathcoding.footballeventapplication.ui.theme.FootballEventApplicationTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,8 +28,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     val navController = rememberNavController()
-                    TeamsScreen(navController = navController)
-//                    MatchScreen()
+                    SetUpNavGraph(navController = navController)
                 }
             }
         }
