@@ -5,11 +5,9 @@ import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.core.common.Resource
 import com.sanathcoding.footballeventapplication.data.mapper.matches.toMatch
 import com.sanathcoding.footballeventapplication.data.mapper.teams.toTeam
-import com.sanathcoding.footballeventapplication.data.mapper.toTeams
 import com.sanathcoding.footballeventapplication.data.remote.FootballApi
 import com.sanathcoding.footballeventapplication.domain.model.match.Match
 import com.sanathcoding.footballeventapplication.domain.model.teams.Team
-import com.sanathcoding.footballeventapplication.domain.model.teams.Teams
 import com.sanathcoding.footballeventapplication.domain.repository.FootballRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
