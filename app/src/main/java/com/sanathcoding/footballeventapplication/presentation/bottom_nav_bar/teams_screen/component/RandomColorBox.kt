@@ -17,7 +17,7 @@ import com.bumptech.glide.integration.compose.GlideImage
 import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.domain.model.teams.Team
 
-@ExperimentalGlideComposeApi
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun RandomColorBox(
     team: Team,
