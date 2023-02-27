@@ -1,6 +1,7 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -21,13 +22,15 @@ import com.sanathcoding.footballeventapplication.domain.model.teams.Team
 @Composable
 fun RandomColorBox(
     team: Team,
+    onTeamClick: (Team) -> Unit,
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
             .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colors.background),
+            .background(MaterialTheme.colors.background)
+            .clickable { onTeamClick(team) },
         backgroundColor = MaterialTheme.colors.background,
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp
