@@ -8,7 +8,7 @@ import retrofit2.http.Path
 interface FootballApi {
 
     @GET("/teams")
-    suspend fun getTeamData(): List<TeamsDto>
+    suspend fun getTeamData(): TeamsDto
 
     @GET("/teams/matches")
     suspend fun getMatchData(): MatchDto
