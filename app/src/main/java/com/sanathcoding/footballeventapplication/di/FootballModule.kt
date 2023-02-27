@@ -1,14 +1,13 @@
 package com.sanathcoding.footballeventapplication.di
 
-import android.app.Application
 import com.sanathcoding.footballeventapplication.core.common.FootballValue.BASE_URL
+import com.sanathcoding.footballeventapplication.data.remote.FootballApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 @Module
@@ -17,12 +16,12 @@ object FootballModule {
 
     @Provides
     @Singleton
-    fun provideFootballApi(app: Application): Retrofit {
+    fun provideFootballApi(): FootballApi {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create()
+            .create(FootballApi::class.java)
     }
 
 }

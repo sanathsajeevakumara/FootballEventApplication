@@ -4,14 +4,17 @@ import android.app.Application
 import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.core.common.Resource
 import com.sanathcoding.footballeventapplication.data.mapper.matches.toMatch
-import com.sanathcoding.footballeventapplication.data.mapper.toTeam
+import com.sanathcoding.footballeventapplication.data.mapper.teams.toTeam
+import com.sanathcoding.footballeventapplication.data.mapper.toTeams
 import com.sanathcoding.footballeventapplication.data.remote.FootballApi
 import com.sanathcoding.footballeventapplication.domain.model.match.Match
 import com.sanathcoding.footballeventapplication.domain.model.teams.Team
+import com.sanathcoding.footballeventapplication.domain.model.teams.Teams
 import com.sanathcoding.footballeventapplication.domain.repository.FootballRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
+import java.io.IOException
 import javax.inject.Inject
 
 class FootballRepositoryImpl @Inject constructor(
@@ -21,7 +24,9 @@ class FootballRepositoryImpl @Inject constructor(
     override suspend fun getTeamData(): Flow<Resource<List<Team>>> = flow {
         try {
             emit(Resource.Loading())
-            val teamData = api.getTeamData().map { teamsDto -> teamsDto.toTeam() }
+            val teamData = api.getTeamData().teams.map {
+                it.toTeam()
+            }
             emit(Resource.Success(data = teamData))
         } catch (e: HttpException) {
             emit(
@@ -30,7 +35,7 @@ class FootballRepositoryImpl @Inject constructor(
                     application.getString(R.string.http_exception)
                 )
             )
-        } catch (e: Exception) {
+        } catch (e: IOException) {
             emit(
                 Resource.Error(application.getString(R.string.connection_exception))
             )
