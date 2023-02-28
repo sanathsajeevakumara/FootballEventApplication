@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.sanathcoding.footballeventapplication.core.util.dateConverter
 import com.sanathcoding.footballeventapplication.core.util.timeConverter
 import com.sanathcoding.footballeventapplication.domain.model.match.Upcoming
+import com.sanathcoding.footballeventapplication.presentation.util.requestNotificationPermission
 
 @Composable
 fun UpComingMatchCard(
@@ -36,6 +37,8 @@ fun UpComingMatchCard(
         mutableStateOf(false)
     }
 
+    val hasNotificationPermission = requestNotificationPermission()
+
     Card(
         modifier = modifier
             .padding(16.dp)
@@ -46,7 +49,7 @@ fun UpComingMatchCard(
                 shape = RoundedCornerShape(10.dp),
             )
             .clickable {
-                       showReminderPopUp = true
+                showReminderPopUp = true
             },
         backgroundColor = MaterialTheme.colors.background,
         shape = RoundedCornerShape(10.dp),
@@ -96,7 +99,11 @@ fun UpComingMatchCard(
         }
     }
 
-    if (showReminderPopUp) SetReminderPopUp(upcoming = upcoming) {
-        showReminderPopUp = false
+    if (hasNotificationPermission) {
+        if (showReminderPopUp) SetReminderPopUp(upcoming = upcoming) {
+            showReminderPopUp = false
+        }
     }
+
+
 }

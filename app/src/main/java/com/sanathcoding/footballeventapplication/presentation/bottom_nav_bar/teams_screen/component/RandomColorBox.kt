@@ -1,6 +1,5 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,7 +9,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
@@ -27,16 +27,22 @@ fun RandomColorBox(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(180.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(MaterialTheme.colors.background)
+            .padding(16.dp)
+            .shadow(
+                elevation = 10.dp,
+                ambientColor = Color.Gray,
+                spotColor = Color.Black,
+                shape = RoundedCornerShape(10.dp),
+            )
             .clickable { onTeamClick(team) },
         backgroundColor = MaterialTheme.colors.background,
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().padding(16.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceAround
         ) {

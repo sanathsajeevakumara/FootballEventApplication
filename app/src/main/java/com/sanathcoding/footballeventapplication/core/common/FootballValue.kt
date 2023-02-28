@@ -11,4 +11,5 @@ object FootballValue {
     const val TEAM_ID = "teamId"
 
     const val EXTRA_MESSAGE ="EXTRA_MESSAGE"
+    const val CHANNEL_ID ="CHANNEL_ID"
 }
