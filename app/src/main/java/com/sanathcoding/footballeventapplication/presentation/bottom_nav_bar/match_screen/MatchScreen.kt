@@ -13,7 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.wear.compose.material.CircularProgressIndicator
+import androidx.compose.material.CircularProgressIndicator
 import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component.PreviousMatchCard
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component.UpComingMatchCard
@@ -70,7 +70,7 @@ fun MatchScreen(
             }
         }
         if (state.error.isNotBlank())
-            androidx.wear.compose.material.Text(
+            Text(
                 text = state.error,
                 color = MaterialTheme.colors.error,
                 textAlign = TextAlign.Center,
