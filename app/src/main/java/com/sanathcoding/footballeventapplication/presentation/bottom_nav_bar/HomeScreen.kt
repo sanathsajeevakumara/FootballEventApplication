@@ -1,8 +1,10 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -22,6 +24,7 @@ fun HomeScreen(navController: NavHostController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValue)
+                .background(MaterialTheme.colors.background)
         ) {
             when (selectedItem){
                 0 -> TeamsScreen(navController)
