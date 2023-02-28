@@ -14,7 +14,9 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class FootballRepositoryImpl @Inject constructor(
     private val api: FootballApi,
     private val application: Application
@@ -26,14 +28,14 @@ class FootballRepositoryImpl @Inject constructor(
                 it.toTeam()
             }
             emit(Resource.Success(data = teamData))
-        } catch (e: HttpException) {
+        } catch (e: IOException) {
             emit(
                 Resource.Error(
                     e.localizedMessage ?:
                     application.getString(R.string.http_exception)
                 )
             )
-        } catch (e: IOException) {
+        } catch (e: HttpException) {
             emit(
                 Resource.Error(application.getString(R.string.connection_exception))
             )
@@ -43,14 +45,14 @@ class FootballRepositoryImpl @Inject constructor(
     override suspend fun getMatchData(): Flow<Resource<Match>> = flow {
         try {
             emit(Resource.Success(data = api.getMatchData().toMatch()))
-        } catch (e: HttpException) {
+        } catch (e: IOException) {
             emit(
                 Resource.Error(
                     e.localizedMessage ?:
                     application.getString(R.string.http_exception)
                 )
             )
-        } catch (e: Exception) {
+        } catch (e: HttpException) {
             emit(
                 Resource.Error(application.getString(R.string.connection_exception))
             )
@@ -62,14 +64,14 @@ class FootballRepositoryImpl @Inject constructor(
             emit(
                 Resource.Success(data = api.getMatchByTeamId(id = id).toMatch())
             )
-        } catch (e: HttpException) {
+        } catch (e: IOException) {
             emit(
                 Resource.Error(
                     e.localizedMessage ?:
                     application.getString(R.string.http_exception)
                 )
             )
-        } catch (e: Exception) {
+        } catch (e: HttpException) {
             emit(
                 Resource.Error(application.getString(R.string.connection_exception))
             )
