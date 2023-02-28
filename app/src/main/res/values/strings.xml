@@ -5,4 +5,6 @@
     <string name="team_logo">Team Image</string>
     <string name="previous_match">Previous Match</string>
     <string name="upcooming_match">Up Coming Match</string>
+    <string name="alarm_in_sec">Trigger reminder in seconds</string>
+    <string name="alarm_message">Message</string>
 </resources>

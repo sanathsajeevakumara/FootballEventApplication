@@ -1,12 +1,12 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -32,6 +32,10 @@ fun UpComingMatchCard(
         dateConverter(upcoming.date)
     }
 
+    var showReminderPopUp by remember {
+        mutableStateOf(false)
+    }
+
     Card(
         modifier = modifier
             .padding(16.dp)
@@ -40,7 +44,10 @@ fun UpComingMatchCard(
                 ambientColor = Color.Gray,
                 spotColor = Color.Black,
                 shape = RoundedCornerShape(10.dp),
-            ),
+            )
+            .clickable {
+                       showReminderPopUp = true
+            },
         backgroundColor = MaterialTheme.colors.background,
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp
@@ -87,5 +94,9 @@ fun UpComingMatchCard(
                 ),
             )
         }
+    }
+
+    if (showReminderPopUp) SetReminderPopUp(upcoming = upcoming) {
+        showReminderPopUp = false
     }
 }
