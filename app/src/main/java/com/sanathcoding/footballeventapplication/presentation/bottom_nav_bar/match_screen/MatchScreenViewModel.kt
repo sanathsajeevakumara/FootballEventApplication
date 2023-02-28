@@ -28,7 +28,7 @@ class MatchScreenViewModel@Inject constructor(
         loadMatchData()
     }
 
-    private fun loadMatchData() {
+    fun loadMatchData() {
         viewModelScope.launch {
             state = state.copy(isLoading = true)
 
