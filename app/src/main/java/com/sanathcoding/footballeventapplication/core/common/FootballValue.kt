@@ -9,4 +9,6 @@ object FootballValue {
     const val TEAM_DETAIL_SCREEN = "TEAM_DETAIL_SCREEN"
 
     const val TEAM_ID = "teamId"
+
+    const val EXTRA_MESSAGE ="EXTRA_MESSAGE"
 }
