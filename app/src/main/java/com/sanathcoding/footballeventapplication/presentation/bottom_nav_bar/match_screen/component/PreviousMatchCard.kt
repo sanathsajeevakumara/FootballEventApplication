@@ -1,11 +1,15 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import com.sanathcoding.footballeventapplication.core.util.dateConverter
 import com.sanathcoding.footballeventapplication.core.util.timeConverter
 import com.sanathcoding.footballeventapplication.domain.model.match.Previous
+import com.sanathcoding.footballeventapplication.ui.theme.Gold
 
 @Composable
 fun PreviousMatchCard(
@@ -55,7 +60,9 @@ fun PreviousMatchCard(
         ) {
             Text(
                 text = previous.winner,
-                style = MaterialTheme.typography.h6,
+                style = MaterialTheme.typography.h6.copy(
+                    color = Color.Cyan
+                ),
                 textAlign = TextAlign.Center
             )
 
@@ -116,13 +123,25 @@ fun PreviousMatchCard(
             }
 
             Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                text = "Click to see the highlights",
-                style = MaterialTheme.typography.h6,
-                modifier = Modifier.clickable {
-                    openVideoPlayer = true
+            Chip(
+                onClick = { openVideoPlayer = true },
+                colors = ChipDefaults.chipColors(
+                    backgroundColor = MaterialTheme.colors.background,
+                    contentColor = Gold
+                ),
+                border = BorderStroke(
+                    ChipDefaults.OutlinedBorderSize,
+                    Gold
+                ),
+                leadingIcon = {
+                    Icon(
+                        Icons.Filled.Star,
+                        contentDescription = "Highlights"
+                    )
                 }
-            )
+            ) {
+                Text(text = "Highlights")
+            }
         }
     }
 

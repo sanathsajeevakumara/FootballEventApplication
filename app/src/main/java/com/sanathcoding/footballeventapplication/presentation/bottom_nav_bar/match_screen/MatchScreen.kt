@@ -26,6 +26,7 @@ fun MatchScreen(
             .background(MaterialTheme.colors.background)
     ) {
 
+        // Nested Scrolling view
         NestedScrollingView(previousList, upComingList)
 
         // Check the state is in error state

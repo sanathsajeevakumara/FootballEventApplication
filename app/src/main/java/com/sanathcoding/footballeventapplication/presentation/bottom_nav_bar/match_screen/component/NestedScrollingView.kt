@@ -24,13 +24,13 @@ fun NestedScrollingView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(16.dp, 16.dp, 16.dp)
             .background(MaterialTheme.colors.background)
     ) {
         item {
             Text(
                 text = stringResource(R.string.previous_match),
-                style = MaterialTheme.typography.h4
+                style = MaterialTheme.typography.h5
             )
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -39,7 +39,7 @@ fun NestedScrollingView(
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = stringResource(R.string.upcooming_match),
-                style = MaterialTheme.typography.h4
+                style = MaterialTheme.typography.h5
             )
             Spacer(modifier = Modifier.height(16.dp))
         }
