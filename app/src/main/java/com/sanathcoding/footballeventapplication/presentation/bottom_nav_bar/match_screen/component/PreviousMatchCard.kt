@@ -43,7 +43,6 @@ fun PreviousMatchCard(
                 shape = RoundedCornerShape(30.dp),
             ),
         backgroundColor = MaterialTheme.colors.background,
-//        backgroundColor = color,
         shape = RoundedCornerShape(30.dp),
         elevation = 10.dp,
     ) {
