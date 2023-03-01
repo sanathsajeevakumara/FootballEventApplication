@@ -1,5 +1,6 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,12 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sanathcoding.footballeventapplication.core.util.dateConverter
 import com.sanathcoding.footballeventapplication.core.util.timeConverter
 import com.sanathcoding.footballeventapplication.domain.model.match.Upcoming
 import com.sanathcoding.footballeventapplication.presentation.util.requestNotificationPermission
+import com.sanathcoding.footballeventapplication.ui.theme.Orange
 
 @Composable
 fun UpComingMatchCard(
@@ -41,7 +44,7 @@ fun UpComingMatchCard(
 
     Card(
         modifier = modifier
-            .padding(16.dp)
+            .padding(10.dp)
             .shadow(
                 elevation = 10.dp,
                 ambientColor = Color.Gray,
@@ -55,47 +58,73 @@ fun UpComingMatchCard(
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp
     ) {
-        Row(
-            modifier = modifier
-                .fillMaxWidth()
-                .padding(20.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+        Column(
+            modifier = Modifier.padding(4.dp),
+            verticalArrangement = Arrangement.SpaceAround,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = upcoming.home,
-                style = MaterialTheme.typography.h6.copy(
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                ),
-            )
-            Spacer(modifier = Modifier.width(16.dp))
-            Column {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(10.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
                 Text(
-                    text = formattedTime ?: "",
+                    text = upcoming.home,
                     style = MaterialTheme.typography.h6.copy(
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Normal,
-                        color = Color.Red
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
                     ),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .padding(start = 16.dp)
                 )
+
+                Column {
+                    Text(
+                        text = formattedTime,
+                        style = MaterialTheme.typography.h6.copy(
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = Orange
+                        ),
+                    )
+                    Text(
+                        text = formattedDate,
+                        style = MaterialTheme.typography.h6.copy(
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = Color.Gray
+                        ),
+                    )
+                }
+
+                Spacer(modifier = Modifier.width(16.dp))
                 Text(
-                    text = formattedDate ?: "",
+                    text = upcoming.away,
                     style = MaterialTheme.typography.h6.copy(
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Normal,
-                        color = Color.Gray
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold,
                     ),
+                    modifier = Modifier.fillMaxWidth().weight(1f)
                 )
             }
-            Spacer(modifier = Modifier.width(16.dp))
-            Text(
-                text = upcoming.away,
-                style = MaterialTheme.typography.h6.copy(
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                ),
-            )
+
+            Row(
+                modifier = Modifier.padding(bottom = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = upcoming.description,
+                    style = MaterialTheme.typography.h6.copy(
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Normal,
+                    ),
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 

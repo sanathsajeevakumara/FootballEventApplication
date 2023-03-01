@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.core.common.FootballValue.TEAM_ID
+import com.sanathcoding.footballeventapplication.core.common.FootballValue.TEAM_NAME
 import com.sanathcoding.footballeventapplication.core.common.Resource
 import com.sanathcoding.footballeventapplication.domain.repository.FootballRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -27,9 +28,14 @@ class TeamDetailViewModel @Inject constructor(
     var state by mutableStateOf(TeamDetailState())
         private set
 
+    var teamName by mutableStateOf("")
+
     init {
         savedStateHandle.get<String>(TEAM_ID)?.let { teamId ->
             loadMatchDataById(teamId)
+        }
+        savedStateHandle.get<String>(TEAM_NAME)?.let { name ->
+            teamName = name
         }
     }
 

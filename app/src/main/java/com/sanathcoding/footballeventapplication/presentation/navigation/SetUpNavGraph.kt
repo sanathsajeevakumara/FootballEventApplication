@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.sanathcoding.footballeventapplication.core.common.FootballValue.TEAM_ID
+import com.sanathcoding.footballeventapplication.core.common.FootballValue.TEAM_NAME
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.HomeScreen
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.MatchScreen
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.team_detail_screen.TeamDetailScreen
@@ -16,8 +17,8 @@ fun SetUpNavGraph(navController: NavHostController) {
         composable(Screen.HomeScreen.route) {
             HomeScreen(navController = navController)
         }
-        composable(Screen.TeamDetailScreen.route + "/{$TEAM_ID}") {
-            TeamDetailScreen()
+        composable(Screen.TeamDetailScreen.route + "/{$TEAM_ID}/{$TEAM_NAME}") {
+            TeamDetailScreen(navController = navController)
         }
     }
 }

@@ -14,14 +14,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.sanathcoding.footballeventapplication.core.common.TestTag.PROGRESS_INDICATOR
-import com.sanathcoding.footballeventapplication.core.common.TestTag.TEAM_LIST
-import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component.RandomColorBox
+import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component.TeamCardContainer
 import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
 
 @Composable
@@ -38,17 +35,20 @@ fun TeamsScreen(
         .background(MaterialTheme.colors.background)
     ) {
         LazyVerticalStaggeredGrid(
-            columns = StaggeredGridCells.Adaptive(150.dp),
-            modifier = Modifier.fillMaxSize().testTag(TEAM_LIST),
+            columns = StaggeredGridCells.Fixed(1),
+            modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(16.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(state.team) { team ->
-                RandomColorBox(
+                TeamCardContainer(
                     team = team,
                     onTeamClick = {
-                        navController.navigate(Screen.TeamDetailScreen.route + "/${team.id}")
+                        navController.navigate(
+                            Screen.TeamDetailScreen.route
+                                    + "/${team.id}/${team.name}"
+                        )
                     }
                 )
             }
@@ -66,7 +66,7 @@ fun TeamsScreen(
                     )
             )
         if (state.isLoading)
-            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center).testTag(PROGRESS_INDICATOR))
+            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
     }
 
 }
