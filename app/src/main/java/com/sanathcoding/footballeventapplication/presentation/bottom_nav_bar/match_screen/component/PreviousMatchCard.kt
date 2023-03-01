@@ -11,10 +11,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.sanathcoding.footballeventapplication.core.util.dateTimeConverter
+import com.sanathcoding.footballeventapplication.core.util.dateConverter
+import com.sanathcoding.footballeventapplication.core.util.timeConverter
 import com.sanathcoding.footballeventapplication.domain.model.match.Previous
 
 @Composable
@@ -23,23 +25,27 @@ fun PreviousMatchCard(
     modifier: Modifier = Modifier
 ) {
     val formattedTime = remember {
-        dateTimeConverter(previous.date)
+        timeConverter(previous.date)
+    }
+    val formattedDate = remember {
+        dateConverter(previous.date)
     }
     var openVideoPlayer by remember {
         mutableStateOf(false)
     }
     Card(
         modifier = modifier
-            .padding(16.dp)
+            .padding(8.dp)
             .shadow(
                 elevation = 10.dp,
                 ambientColor = Color.Gray,
                 spotColor = Color.Black,
-                shape = RoundedCornerShape(10.dp),
+                shape = RoundedCornerShape(30.dp),
             ),
         backgroundColor = MaterialTheme.colors.background,
-        shape = RoundedCornerShape(10.dp),
-        elevation = 10.dp
+//        backgroundColor = color,
+        shape = RoundedCornerShape(30.dp),
+        elevation = 10.dp,
     ) {
         Column(
             modifier = Modifier
@@ -48,32 +54,25 @@ fun PreviousMatchCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-//            Text(
-//                text = previous.description,
-//                style = MaterialTheme.typography.h6.copy(
-//                    fontSize = 15.sp
-//                ),
-//                modifier = Modifier.align(Alignment.CenterHorizontally)
-//            )
-//            Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = formattedTime,
-                style = MaterialTheme.typography.h6.copy(
-                    fontSize = 12.sp
-                ),
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                text = "Click to see the highlights",
+                text = previous.winner,
                 style = MaterialTheme.typography.h6,
-                modifier = Modifier.clickable {
-                    openVideoPlayer = true
-                }
+                textAlign = TextAlign.Center
             )
+
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "$formattedTime  |  $formattedDate",
+                style = MaterialTheme.typography.h6.copy(
+                    fontSize = 13.sp,
+                    fontStyle = FontStyle.Normal
+                ),
+                textAlign = TextAlign.Center
+            )
+
             Spacer(modifier = Modifier.height(16.dp))
             Row(
-                modifier = modifier
+                modifier = Modifier
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center,
             ) {
@@ -86,45 +85,44 @@ fun PreviousMatchCard(
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
                     text = "VS",
-                    fontSize = 14.sp,
+                    fontSize = 18.sp,
                     modifier = Modifier.padding(4.dp)
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
-                    text = previous.home,
+                    text = previous.away,
                     style = MaterialTheme.typography.body1,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(4.dp)
                 )
             }
-            Spacer(modifier = Modifier.height(16.dp))
+
+            Spacer(modifier = Modifier.height(8.dp))
             Row(
-                modifier = modifier
+                modifier = Modifier
                     .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
+                horizontalArrangement = Arrangement.spacedBy(40.dp),
             ) {
                 Text(
                     text = "Home",
                     style = MaterialTheme.typography.body1,
-                    color = Color.White,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(8.dp)
                 )
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
                     text = "Away",
                     style = MaterialTheme.typography.body1,
-                    color = Color.White,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(8.dp)
                 )
             }
+
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = previous.winner,
+                text = "Click to see the highlights",
                 style = MaterialTheme.typography.h6,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.clickable {
+                    openVideoPlayer = true
+                }
             )
         }
     }

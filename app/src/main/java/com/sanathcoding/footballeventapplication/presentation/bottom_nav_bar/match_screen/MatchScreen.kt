@@ -14,9 +14,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.ui.graphics.Color
 import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component.PreviousMatchCard
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component.UpComingMatchCard
+import kotlin.random.Random
 
 @Composable
 fun MatchScreen(
@@ -45,8 +47,6 @@ fun MatchScreen(
                     items(it) { previous ->
                         PreviousMatchCard(
                             previous = previous,
-                            modifier = Modifier
-                                .height(250.dp)
                         )
                     }
                 })
