@@ -57,7 +57,7 @@ fun PreviousMatchCard(
 //            )
 //            Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = formattedTime,
+                text = formattedTime ?: "",
                 style = MaterialTheme.typography.h6.copy(
                     fontSize = 12.sp
                 ),

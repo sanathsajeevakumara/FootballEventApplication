@@ -72,7 +72,7 @@ fun UpComingMatchCard(
             Spacer(modifier = Modifier.width(16.dp))
             Column {
                 Text(
-                    text = formattedTime,
+                    text = formattedTime ?: "",
                     style = MaterialTheme.typography.h6.copy(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Normal,
@@ -80,7 +80,7 @@ fun UpComingMatchCard(
                     ),
                 )
                 Text(
-                    text = formattedDate,
+                    text = formattedDate ?: "",
                     style = MaterialTheme.typography.h6.copy(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Normal,
