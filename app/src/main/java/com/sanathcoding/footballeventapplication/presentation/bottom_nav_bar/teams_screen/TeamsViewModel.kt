@@ -27,8 +27,8 @@ class TeamsViewModel @Inject constructor(
 
     init { loadTeamsData() }
 
-    private fun loadTeamsData() {
-        viewModelScope.launch() {
+    fun loadTeamsData() {
+        viewModelScope.launch {
 
             state = state.copy(isLoading = true)
 
@@ -47,7 +47,9 @@ class TeamsViewModel @Inject constructor(
                     }
                     is Resource.Error -> {
                         state = state.copy(
-                            error = resource.message ?: application.getString(R.string.http_exception),
+//                            error = resource.message ?: application.getString(R.string.http_exception),
+                            error = resource.message ?:
+                            "An Unexpected error occurred.",
                             isLoading = false,
                             team = emptyList()
                         )

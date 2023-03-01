@@ -1,0 +1,29 @@
+name: Unit Test
+on: [pull_request]
+jobs:
+  test_job:
+    name: Test
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+        
+      - name: Restore Cache
+        uses: actions/cache@v3.2.6
+        with: 
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: $[{ runner.os }]-gradle-$[{ hashFile('**/*.gradle*') }]
+          restore-key: |
+            $[{ runner.os }]-gradle-
+        
+      - name: Unit Test
+        run: ./gradlew testDebugUnitTest
+        
+      - name: Upload Test Reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: test-reports
+          path: '**/build/reports/tests'
