@@ -20,13 +20,14 @@ import com.sanathcoding.footballeventapplication.domain.model.teams.Team
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
-fun RandomColorBox(
+fun TeamCardContainer(
     team: Team,
     onTeamClick: (Team) -> Unit,
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
+            .fillMaxHeight()
             .padding(16.dp)
             .shadow(
                 elevation = 10.dp,
