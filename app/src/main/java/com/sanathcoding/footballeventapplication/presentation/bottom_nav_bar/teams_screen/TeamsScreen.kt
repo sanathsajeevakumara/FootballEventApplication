@@ -21,6 +21,7 @@ import androidx.navigation.NavController
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component.TeamCardContainer
 import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TeamsScreen(
     navController: NavController,
