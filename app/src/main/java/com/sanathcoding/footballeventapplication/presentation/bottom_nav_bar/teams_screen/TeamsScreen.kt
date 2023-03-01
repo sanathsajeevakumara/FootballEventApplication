@@ -45,7 +45,10 @@ fun TeamsScreen(
                 TeamCardContainer(
                     team = team,
                     onTeamClick = {
-                        navController.navigate(Screen.TeamDetailScreen.route + "/${team.id}")
+                        navController.navigate(
+                            Screen.TeamDetailScreen.route
+                                    + "/${team.id}/${team.name}"
+                        )
                     }
                 )
             }
