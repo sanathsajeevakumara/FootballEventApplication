@@ -8,7 +8,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.MatchScreen
 import com.sanathcoding.footballeventapplication.presentation.navigation.SetUpNavGraph
 import com.sanathcoding.footballeventapplication.ui.theme.FootballEventApplicationTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,9 +22,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-//                    val navController = rememberNavController()
-//                    SetUpNavGraph(navController = navController)
-                    MatchScreen()
+                    val navController = rememberNavController()
+                    SetUpNavGraph(navController = navController)
                 }
             }
         }
