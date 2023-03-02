@@ -7,7 +7,7 @@
     <string name="upcooming_match">UpComing Matches</string>
     <string name="alarm_in_sec">Trigger reminder in seconds</string>
     <string name="alarm_message">Message</string>
-    <string name="channel_name">Channel_name</string>
+    <string name="channel_name">Football Notification</string>
     <string name="reminder_title">Set Reminder</string>
     <string name="add">Add</string>
 </resources>

@@ -18,7 +18,8 @@ class AlarmReceiver: BroadcastReceiver() {
     }
 
     private fun showNotification(context: Context?, message: String) {
-        val notificationManager = context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManager = context?.getSystemService(Context.NOTIFICATION_SERVICE)
+                as NotificationManager
         val notification = NotificationCompat.Builder(context, FootballValue.CHANNEL_ID)
             .setContentTitle("Match Reminder")
             .setContentText(message)
