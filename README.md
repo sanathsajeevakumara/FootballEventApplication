@@ -14,8 +14,12 @@ This is a sample Football Event Application, This will retrieve and show avalabi
 * Load Image: Glide Image Library
 * Load Video: Exoplayer Library
 
-### App Preview
+# App Preview
 
 https://user-images.githubusercontent.com/11756630/222366221-f48522f8-59e3-4008-8566-2c37262afb04.mp4
+
+# App Architecture
+
+![architecture](https://user-images.githubusercontent.com/11756630/222377667-406cd12e-be08-4b81-a0e1-5dc92c292cfd.png)
 
 
