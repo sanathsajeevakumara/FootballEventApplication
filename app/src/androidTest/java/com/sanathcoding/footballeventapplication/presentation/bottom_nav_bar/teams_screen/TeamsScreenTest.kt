@@ -1,16 +1,13 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen
 
 import androidx.activity.compose.setContent
-import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onChildren
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.sanathcoding.footballeventapplication.core.common.TestTag.PROGRESS_INDICATOR
-import com.sanathcoding.footballeventapplication.core.common.TestTag.TEAM_LIST
 import com.sanathcoding.footballeventapplication.di.FootballModule
 import com.sanathcoding.footballeventapplication.di.FootballRepositoryModule
 import com.sanathcoding.footballeventapplication.presentation.MainActivity

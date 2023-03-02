@@ -1,0 +1,74 @@
+{
+  "matches": {
+    "previous": [
+      {
+        "date": "2022-04-23T18:00:00.000Z",
+        "description": "Team Cool Eagles vs. Team Red Dragons",
+        "home": "Team Cool Eagles",
+        "away": "Team Red Dragons",
+        "winner": "Team Red Dragons",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-17T18:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Growling Tigers",
+        "home": "Team Red Dragons",
+        "away": "Team Growling Tigers",
+        "winner": "Team Growling Tigers",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-21T18:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Fiery Phoenix",
+        "home": "Team Red Dragons",
+        "away": "Team Fiery Phoenix",
+        "winner": "Team Fiery Phoenix",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-04T20:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Serious Lions",
+        "home": "Team Red Dragons",
+        "away": "Team Serious Lions",
+        "winner": "Team Red Dragons",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-10T20:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Chill Elephants",
+        "home": "Team Red Dragons",
+        "away": "Team Chill Elephants",
+        "winner": "Team Chill Elephants",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-13T18:00:00.000Z",
+        "description": "Team Royal Knights vs. Team Red Dragons",
+        "home": "Team Royal Knights",
+        "away": "Team Red Dragons",
+        "winner": "Team Royal Knights",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      }
+    ],
+    "upcoming": [
+      {
+        "date": "2022-08-14T20:00:00.000Z",
+        "description": "Team Hungry Sharks vs. Team Red Dragons",
+        "home": "Team Hungry Sharks",
+        "away": "Team Red Dragons"
+      },
+      {
+        "date": "2022-08-15T20:00:00.000Z",
+        "description": "Team Angry Pandas vs. Team Red Dragons",
+        "home": "Team Angry Pandas",
+        "away": "Team Red Dragons"
+      },
+      {
+        "date": "2022-09-03T18:00:00.000Z",
+        "description": "Team Win Kings vs. Team Red Dragons",
+        "home": "Team Win Kings",
+        "away": "Team Red Dragons"
+      }
+    ]
+  }
+}

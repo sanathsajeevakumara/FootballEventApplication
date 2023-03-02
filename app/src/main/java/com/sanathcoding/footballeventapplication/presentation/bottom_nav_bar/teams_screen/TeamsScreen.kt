@@ -14,10 +14,15 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.sanathcoding.footballeventapplication.core.common.TestTag
+import com.sanathcoding.footballeventapplication.core.common.TestTag.TEAM_LIST
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component.TeamCardContainer
 import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
 
@@ -37,7 +42,11 @@ fun TeamsScreen(
     ) {
         LazyVerticalStaggeredGrid(
             columns = StaggeredGridCells.Fixed(1),
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .semantics {
+                    contentDescription = TEAM_LIST
+                },
             contentPadding = PaddingValues(16.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -67,7 +76,11 @@ fun TeamsScreen(
                     )
             )
         if (state.isLoading)
-            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+            CircularProgressIndicator(
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .testTag(TestTag.PROGRESS_INDICATOR)
+            )
     }
 
 }
