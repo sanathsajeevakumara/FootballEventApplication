@@ -1,6 +1,5 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -63,54 +62,7 @@ fun UpComingMatchCard(
             verticalArrangement = Arrangement.SpaceAround,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(10.dp),
-                horizontalArrangement = Arrangement.SpaceEvenly,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = upcoming.home,
-                    style = MaterialTheme.typography.h6.copy(
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold,
-                    ),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f)
-                        .padding(start = 16.dp)
-                )
-
-                Column {
-                    Text(
-                        text = formattedTime,
-                        style = MaterialTheme.typography.h6.copy(
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Normal,
-                            color = Orange
-                        ),
-                    )
-                    Text(
-                        text = formattedDate,
-                        style = MaterialTheme.typography.h6.copy(
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Normal,
-                            color = Color.Gray
-                        ),
-                    )
-                }
-
-                Spacer(modifier = Modifier.width(16.dp))
-                Text(
-                    text = upcoming.away,
-                    style = MaterialTheme.typography.h6.copy(
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold,
-                    ),
-                    modifier = Modifier.fillMaxWidth().weight(1f)
-                )
-            }
+            UpComingTeamDetail(upcoming, formattedTime, formattedDate)
 
             Row(
                 modifier = Modifier.padding(bottom = 16.dp),

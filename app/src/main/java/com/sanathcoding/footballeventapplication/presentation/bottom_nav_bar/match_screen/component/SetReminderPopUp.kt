@@ -13,6 +13,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.sanathcoding.footballeventapplication.R
+import com.sanathcoding.footballeventapplication.core.util.showToast
 import com.sanathcoding.footballeventapplication.data.remote.repository.AndroidAlarmScheduler
 import com.sanathcoding.footballeventapplication.domain.model.AlarmItem
 import com.sanathcoding.footballeventapplication.domain.model.match.Upcoming
@@ -24,6 +25,7 @@ fun SetReminderPopUp(
     onDismiss: () -> Unit
 ) {
 
+    val context = LocalContext.current
     val scheduler = AndroidAlarmScheduler(LocalContext.current)
     var alarmItem: AlarmItem?
 
@@ -44,7 +46,7 @@ fun SetReminderPopUp(
                     .padding(16.dp)
             ) {
                 Text(
-                    text = "Add Reminder",
+                    text = stringResource(R.string.reminder_title),
                     style = MaterialTheme.typography.h6,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -76,15 +78,10 @@ fun SetReminderPopUp(
                         alarmItem?.let (scheduler::scheduler)
                         secondsText = ""
                         onDismiss()
+                        context.showToast("Reminder Added Successfully")
                     }) {
-                        Text(text = "Add Reminder")
+                        Text(text = stringResource(R.string.add))
                     }
-//                    Spacer(modifier = Modifier.width(18.dp))
-//                    TextButton(onClick = {
-//                        alarmItem?.let (scheduler::cancel)
-//                    }) {
-//                        Text(text = "Cancel")
-//                    }
                 }
             }
         }
