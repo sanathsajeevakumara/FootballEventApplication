@@ -1,0 +1,338 @@
+{
+  "matches": {
+    "previous": [
+      {
+        "date": "2022-04-23T18:00:00.000Z",
+        "description": "Team Cool Eagles vs. Team Red Dragons",
+        "home": "Team Cool Eagles",
+        "away": "Team Red Dragons",
+        "winner": "Team Red Dragons",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-04-24T18:00:00.000Z",
+        "description": "Team Chill Elephants vs. Team Royal Knights",
+        "home": "Team Chill Elephants",
+        "away": "Team Royal Knights",
+        "winner": "Team Chill Elephants",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-04-24T18:00:00.000Z",
+        "description": "Team Win Kings vs. Team Growling Tigers",
+        "home": "Team Win Kings",
+        "away": "Team Growling Tigers",
+        "winner": "Team Win Kings",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-04-25T18:00:00.000Z",
+        "description": "Team Serious Lions vs. Team Hungry Sharks",
+        "home": "Team Serious Lions",
+        "away": "Team Hungry Sharks",
+        "winner": "Team Hungry Sharks",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-04-26T18:00:00.000Z",
+        "description": "Team Angry Pandas vs. Team Fiery Phoenix",
+        "home": "Team Angry Pandas",
+        "away": "Team Fiery Phoenix",
+        "winner": "Team Angry Pandas",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-16T18:00:00.000Z",
+        "description": "Team Royal Knights vs. Team Cool Eagles",
+        "home": "Team Royal Knights",
+        "away": "Team Cool Eagles",
+        "winner": "Team Cool Eagles",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-17T18:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Growling Tigers",
+        "home": "Team Red Dragons",
+        "away": "Team Growling Tigers",
+        "winner": "Team Growling Tigers",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-18T17:00:00.000Z",
+        "description": "Team Chill Elephants vs. Team Hungry Sharks",
+        "home": "Team Chill Elephants",
+        "away": "Team Hungry Sharks",
+        "winner": "Team Hungry Sharks",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-19T20:00:00.000Z",
+        "description": "Team Win Kings vs. Team Fiery Phoenix",
+        "home": "Team Win Kings",
+        "away": "Team Fiery Phoenix",
+        "winner": "Team Fiery Phoenix",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-19T20:00:00.000Z",
+        "description": "Team Serious Lions vs. Team Angry Pandas",
+        "home": "Team Serious Lions",
+        "away": "Team Angry Pandas",
+        "winner": "Team Serious Lions",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-20T18:00:00.000Z",
+        "description": "Team Cool Eagles vs. Team Growling Tigers",
+        "home": "Team Cool Eagles",
+        "away": "Team Growling Tigers",
+        "winner": "Team Growling Tigers",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-20T18:00:00.000Z",
+        "description": "Team Royal Knights vs. Team Hungry Sharks",
+        "home": "Team Royal Knights",
+        "away": "Team Hungry Sharks",
+        "winner": "Team Royal Knights",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-21T18:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Fiery Phoenix",
+        "home": "Team Red Dragons",
+        "away": "Team Fiery Phoenix",
+        "winner": "Team Fiery Phoenix",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-22T18:00:00.000Z",
+        "description": "Team Chill Elephants vs. Team Angry Pandas",
+        "home": "Team Chill Elephants",
+        "away": "Team Angry Pandas",
+        "winner": "Team Chill Elephants",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-05-23T18:00:00.000Z",
+        "description": "Team Win Kings vs. Team Serious Lions",
+        "home": "Team Win Kings",
+        "away": "Team Serious Lions",
+        "winner": "Team Serious Lions",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-01T20:00:00.000Z",
+        "description": "Team Hungry Sharks vs. Team Cool Eagles",
+        "home": "Team Hungry Sharks",
+        "away": "Team Cool Eagles",
+        "winner": "Team Cool Eagles",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-02T20:00:00.000Z",
+        "description": "Team Growling Tigers vs. Team Fiery Phoenix",
+        "home": "Team Growling Tigers",
+        "away": "Team Fiery Phoenix",
+        "winner": "Team Fiery Phoenix",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-03T20:00:00.000Z",
+        "description": "Team Royal Knights vs. Team Angry Pandas",
+        "home": "Team Royal Knights",
+        "away": "Team Angry Pandas",
+        "winner": "Team Angry Pandas",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-04T20:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Serious Lions",
+        "home": "Team Red Dragons",
+        "away": "Team Serious Lions",
+        "winner": "Team Red Dragons",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-05T20:00:00.000Z",
+        "description": "Team Chill Elephants vs. Team Win Kings",
+        "home": "Team Chill Elephants",
+        "away": "Team Win Kings",
+        "winner": "Team Win Kings",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-06T20:00:00.000Z",
+        "description": "Team Cool Eagles vs. Team Fiery Phoenix",
+        "home": "Team Cool Eagles",
+        "away": "Team Fiery Phoenix",
+        "winner": "Team Cool Eagles",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-07T20:00:00.000Z",
+        "description": "Team Hungry Sharks vs. Team Angry Pandas",
+        "home": "Team Hungry Sharks",
+        "away": "Team Angry Pandas",
+        "winner": "Team Angry Pandas",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-08T20:00:00.000Z",
+        "description": "Team Growling Tigers vs. Team Serious Lions",
+        "home": "Team Growling Tigers",
+        "away": "Team Serious Lions",
+        "winner": "Team Growling Tigers",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-09T20:00:00.000Z",
+        "description": "Team Royal Knights vs. Team Win Kings",
+        "home": "Team Royal Knights",
+        "away": "Team Win Kings",
+        "winner": "Team Win Kings",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-10T20:00:00.000Z",
+        "description": "Team Red Dragons vs. Team Chill Elephants",
+        "home": "Team Red Dragons",
+        "away": "Team Chill Elephants",
+        "winner": "Team Chill Elephants",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-11T18:00:00.000Z",
+        "description": "Team Angry Pandas vs. Team Cool Eagles",
+        "home": "Team Angry Pandas",
+        "away": "Team Cool Eagles",
+        "winner": "Team Angry Pandas",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-12T18:00:00.000Z",
+        "description": "Team Fiery Phoenix vs. Team Serious Lions",
+        "home": "Team Fiery Phoenix",
+        "away": "Team Serious Lions",
+        "winner": "Team Serious Lions",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-12T18:00:00.000Z",
+        "description": "Team Hungry Sharks vs. Team Win Kings",
+        "home": "Team Hungry Sharks",
+        "away": "Team Win Kings",
+        "winner": "Team Hungry Sharks",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-13T18:00:00.000Z",
+        "description": "Team Growling Tigers vs. Team Chill Elephants",
+        "home": "Team Growling Tigers",
+        "away": "Team Chill Elephants",
+        "winner": "Team Chill Elephants",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      },
+      {
+        "date": "2022-06-13T18:00:00.000Z",
+        "description": "Team Royal Knights vs. Team Red Dragons",
+        "home": "Team Royal Knights",
+        "away": "Team Red Dragons",
+        "winner": "Team Royal Knights",
+        "highlights": "https://tstzj.s3.amazonaws.com/highlights.mp4"
+      }
+    ],
+    "upcoming": [
+      {
+        "date": "2022-08-13T20:00:00.000Z",
+        "description": "Team Cool Eagles vs. Team Serious Lions",
+        "home": "Team Cool Eagles",
+        "away": "Team Serious Lions"
+      },
+      {
+        "date": "2022-08-13T20:00:00.000Z",
+        "description": "Team Angry Pandas vs. Team Win Kings",
+        "home": "Team Angry Pandas",
+        "away": "Team Win Kings"
+      },
+      {
+        "date": "2022-08-14T20:00:00.000Z",
+        "description": "Team Fiery Phoenix vs. Team Chill Elephants",
+        "home": "Team Fiery Phoenix",
+        "away": "Team Chill Elephants"
+      },
+      {
+        "date": "2022-08-14T20:00:00.000Z",
+        "description": "Team Hungry Sharks vs. Team Red Dragons",
+        "home": "Team Hungry Sharks",
+        "away": "Team Red Dragons"
+      },
+      {
+        "date": "2022-08-14T20:00:00.000Z",
+        "description": "Team Growling Tigers vs. Team Royal Knights",
+        "home": "Team Growling Tigers",
+        "away": "Team Royal Knights"
+      },
+      {
+        "date": "2022-08-14T20:00:00.000Z",
+        "description": "Team Win Kings vs. Team Cool Eagles",
+        "home": "Team Win Kings",
+        "away": "Team Cool Eagles"
+      },
+      {
+        "date": "2022-08-15T20:00:00.000Z",
+        "description": "Team Serious Lions vs. Team Chill Elephants",
+        "home": "Team Serious Lions",
+        "away": "Team Chill Elephants"
+      },
+      {
+        "date": "2022-08-15T20:00:00.000Z",
+        "description": "Team Angry Pandas vs. Team Red Dragons",
+        "home": "Team Angry Pandas",
+        "away": "Team Red Dragons"
+      },
+      {
+        "date": "2022-08-15T20:00:00.000Z",
+        "description": "Team Fiery Phoenix vs. Team Royal Knights",
+        "home": "Team Fiery Phoenix",
+        "away": "Team Royal Knights"
+      },
+      {
+        "date": "2022-08-15T20:00:00.000Z",
+        "description": "Team Hungry Sharks vs. Team Growling Tigers",
+        "home": "Team Hungry Sharks",
+        "away": "Team Growling Tigers"
+      },
+      {
+        "date": "2022-09-01T18:00:00.000Z",
+        "description": "Team Cool Eagles vs. Team Chill Elephants",
+        "home": "Team Cool Eagles",
+        "away": "Team Chill Elephants"
+      },
+      {
+        "date": "2022-09-03T18:00:00.000Z",
+        "description": "Team Win Kings vs. Team Red Dragons",
+        "home": "Team Win Kings",
+        "away": "Team Red Dragons"
+      },
+      {
+        "date": "2022-09-04T18:00:00.000Z",
+        "description": "Team Serious Lions vs. Team Royal Knights",
+        "home": "Team Serious Lions",
+        "away": "Team Royal Knights"
+      },
+      {
+        "date": "2022-09-05T18:00:00.000Z",
+        "description": "Team Angry Pandas vs. Team Growling Tigers",
+        "home": "Team Angry Pandas",
+        "away": "Team Growling Tigers"
+      },
+      {
+        "date": "2022-09-06T18:00:00.000Z",
+        "description": "Team Fiery Phoenix vs. Team Hungry Sharks",
+        "home": "Team Fiery Phoenix ",
+        "away": "Team Hungry Sharks"
+      }
+    ]
+  }
+}
