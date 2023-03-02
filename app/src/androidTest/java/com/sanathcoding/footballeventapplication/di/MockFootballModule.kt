@@ -1,7 +1,6 @@
-package com.sanathcoding.footballeventapplication.mockserver
+package com.sanathcoding.footballeventapplication.di
 
 import com.sanathcoding.footballeventapplication.core.common.FootballValue
-import com.sanathcoding.footballeventapplication.di.TestFootballModule
 import dagger.Module
 import dagger.hilt.components.SingletonComponent
 import dagger.hilt.testing.TestInstallIn
@@ -9,10 +8,10 @@ import dagger.hilt.testing.TestInstallIn
 @Module
 @TestInstallIn(
     components = [SingletonComponent::class],
-    replaces = [TestFootballModule::class]
+    replaces = [FootballModule::class]
 )
-class MockNetWorkModule: TestFootballModule() {
-    override fun baseUrl(): String {
+class MockFootballModule: FootballModule() {
+    override fun getBaseUrl(): String {
         return FootballValue.TEST_BASE_URL
     }
 }

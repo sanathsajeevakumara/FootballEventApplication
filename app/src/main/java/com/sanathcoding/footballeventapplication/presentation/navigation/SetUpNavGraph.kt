@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.sanathcoding.footballeventapplication.core.common.FootballValue.TEAM_ID
 import com.sanathcoding.footballeventapplication.core.common.FootballValue.TEAM_NAME
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.HomeScreen
@@ -12,7 +13,8 @@ import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.tea
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.TeamsScreen
 
 @Composable
-fun SetUpNavGraph(navController: NavHostController) {
+fun SetUpNavGraph() {
+    val navController = rememberNavController()
     NavHost(navController = navController, startDestination = Screen.HomeScreen.route) {
         composable(Screen.HomeScreen.route) {
             HomeScreen(navController = navController)
