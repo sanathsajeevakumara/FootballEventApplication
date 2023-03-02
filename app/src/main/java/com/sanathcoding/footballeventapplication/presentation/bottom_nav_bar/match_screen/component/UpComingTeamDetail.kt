@@ -8,6 +8,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sanathcoding.footballeventapplication.domain.model.match.Upcoming
@@ -33,9 +34,9 @@ fun UpComingTeamDetail(
                 fontWeight = FontWeight.Bold,
             ),
             modifier = Modifier
-                .fillMaxWidth()
                 .weight(1f)
-                .padding(start = 16.dp)
+                .padding(start = 16.dp),
+            textAlign = TextAlign.Center
         )
 
         Column {
@@ -66,7 +67,8 @@ fun UpComingTeamDetail(
             ),
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
+                .weight(1f),
+            textAlign = TextAlign.Center
         )
     }
 }
