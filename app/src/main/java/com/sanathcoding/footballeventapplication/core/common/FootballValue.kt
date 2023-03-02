@@ -2,6 +2,7 @@ package com.sanathcoding.footballeventapplication.core.common
 
 object FootballValue {
     const val BASE_URL = "https://jmde6xvjr4.execute-api.us-east-1.amazonaws.com"
+    const val TEST_BASE_URL = "https://localhost:8080"
 
     const val HOME_SCREEN = "HOME_SCREEN"
     const val TEAMS_SCREEN = "TEAMS_SCREEN"
