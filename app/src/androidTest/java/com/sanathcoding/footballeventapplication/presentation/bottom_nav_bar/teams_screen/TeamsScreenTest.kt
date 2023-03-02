@@ -9,7 +9,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.sanathcoding.footballeventapplication.core.common.TestTag.PROGRESS_INDICATOR
 import com.sanathcoding.footballeventapplication.di.FootballModule
-import com.sanathcoding.footballeventapplication.di.FootballRepositoryModule
 import com.sanathcoding.footballeventapplication.presentation.MainActivity
 import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
 import com.sanathcoding.footballeventapplication.ui.theme.FootballEventApplicationTheme
@@ -21,7 +20,7 @@ import org.junit.Rule
 import org.junit.Test
 
 @HiltAndroidTest
-@UninstallModules(FootballModule::class, FootballRepositoryModule::class)
+//@UninstallModules(FootballModule::class, FootballRepositoryModule::class)
 class TeamsScreenTest {
 
     @get:Rule(order = 0)
