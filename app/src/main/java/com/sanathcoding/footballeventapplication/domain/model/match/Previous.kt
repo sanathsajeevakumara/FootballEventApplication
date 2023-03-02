@@ -1,5 +1,6 @@
 package com.sanathcoding.footballeventapplication.domain.model.match
 
+@kotlinx.serialization.Serializable
 data class Previous(
     val away: String,
     val date: String,
