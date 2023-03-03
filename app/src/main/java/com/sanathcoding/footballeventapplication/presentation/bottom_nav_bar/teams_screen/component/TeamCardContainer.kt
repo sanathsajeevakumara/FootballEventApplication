@@ -12,10 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.sanathcoding.footballeventapplication.R
+import com.sanathcoding.footballeventapplication.core.common.TestTag.TEAM_ITEM
 import com.sanathcoding.footballeventapplication.domain.model.teams.Team
 
 @OptIn(ExperimentalGlideComposeApi::class)
@@ -35,7 +38,10 @@ fun TeamCardContainer(
                 spotColor = Color.Black,
                 shape = RoundedCornerShape(10.dp),
             )
-            .clickable { onTeamClick(team) },
+            .clickable { onTeamClick(team) }
+            .semantics {
+                       contentDescription = TEAM_ITEM
+            },
         backgroundColor = MaterialTheme.colors.background,
         shape = RoundedCornerShape(10.dp),
         elevation = 10.dp

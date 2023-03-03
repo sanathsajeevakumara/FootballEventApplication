@@ -1,5 +1,6 @@
-package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.base
+package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.base
 
+import androidx.activity.compose.setContent
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import com.sanathcoding.footballeventapplication.presentation.MainActivity
 import com.sanathcoding.footballeventapplication.presentation.navigation.SetUpNavGraph
@@ -32,7 +33,7 @@ open class BaseScreenTest {
     }
 
     fun setMainContent() {
-        composeRule.setContent {
+        composeRule.activity.setContent {
             FootballEventApplicationTheme {
                 SetUpNavGraph()
             }

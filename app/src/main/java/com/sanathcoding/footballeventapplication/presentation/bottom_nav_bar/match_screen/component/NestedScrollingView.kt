@@ -38,7 +38,7 @@ fun NestedScrollingView(
 
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = stringResource(R.string.upcooming_match),
+                text = stringResource(R.string.upcoming_match),
                 style = MaterialTheme.typography.h5
             )
             Spacer(modifier = Modifier.height(16.dp))

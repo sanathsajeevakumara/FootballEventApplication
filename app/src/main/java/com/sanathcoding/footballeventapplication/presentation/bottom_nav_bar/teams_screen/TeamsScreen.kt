@@ -22,6 +22,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.sanathcoding.footballeventapplication.core.common.TestTag
+import com.sanathcoding.footballeventapplication.core.common.TestTag.ERROR_TAG
+import com.sanathcoding.footballeventapplication.core.common.TestTag.PROGRESS_INDICATOR
 import com.sanathcoding.footballeventapplication.core.common.TestTag.TEAM_LIST
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.component.TeamCardContainer
 import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
@@ -74,12 +76,13 @@ fun TeamsScreen(
                     .align(
                         Alignment.Center
                     )
+                    .testTag(ERROR_TAG)
             )
         if (state.isLoading)
             CircularProgressIndicator(
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .testTag(TestTag.PROGRESS_INDICATOR)
+                    .testTag(PROGRESS_INDICATOR)
             )
     }
 

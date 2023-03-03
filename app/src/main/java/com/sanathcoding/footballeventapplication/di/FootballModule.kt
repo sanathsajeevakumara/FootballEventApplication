@@ -23,10 +23,11 @@ open class FootballModule {
 
     @Provides
     @Singleton
-    fun provideFootballApi(): FootballApi {
+    fun provideFootballApi(okHttpClient: OkHttpClient): FootballApi {
         return Retrofit.Builder()
             .baseUrl(getBaseUrl())
             .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
             .build()
             .create(FootballApi::class.java)
     }
