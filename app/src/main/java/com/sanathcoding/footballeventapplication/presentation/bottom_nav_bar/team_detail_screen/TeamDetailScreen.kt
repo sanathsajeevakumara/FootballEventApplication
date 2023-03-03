@@ -13,7 +13,9 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.navigation.NavController
+import com.sanathcoding.footballeventapplication.core.common.TestTag.PROGRESS_INDICATOR1
 import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.match_screen.component.NestedScrollingView
 
 @Composable
@@ -27,7 +29,7 @@ fun TeamDetailScreen(
     val upComingList = state.match?.matches?.upcoming
 
     val scaffoldState = rememberScaffoldState()
-    
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -75,7 +77,11 @@ fun TeamDetailScreen(
 
             // Check the state is in loading state
             if (state.isLoading)
-                CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                CircularProgressIndicator(
+                    modifier = Modifier
+                        .align(Alignment.Center)
+                        .testTag(PROGRESS_INDICATOR1)
+                )
         }
 
     }

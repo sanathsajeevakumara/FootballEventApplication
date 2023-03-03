@@ -29,15 +29,13 @@ class FootballRepositoryImpl @Inject constructor(
             }
             emit(Resource.Success(data = teamData))
         } catch (e: IOException) {
-            emit(
-                Resource.Error(
-                    e.localizedMessage ?:
-                    application.getString(R.string.http_exception)
-                )
-            )
+            emit(Resource.Error(application.getString(R.string.connection_exception)))
         } catch (e: HttpException) {
             emit(
-                Resource.Error(application.getString(R.string.connection_exception))
+                Resource.Error(
+                    application.getString(R.string.http_exception)
+                )
+
             )
         }
     }
@@ -46,15 +44,13 @@ class FootballRepositoryImpl @Inject constructor(
         try {
             emit(Resource.Success(data = api.getMatchData().toMatch()))
         } catch (e: IOException) {
-            emit(
-                Resource.Error(
-                    e.localizedMessage ?:
-                    application.getString(R.string.http_exception)
-                )
-            )
+            emit(Resource.Error(application.getString(R.string.connection_exception)))
         } catch (e: HttpException) {
             emit(
-                Resource.Error(application.getString(R.string.connection_exception))
+                Resource.Error(
+                    application.getString(R.string.http_exception)
+                )
+
             )
         }
     }
@@ -65,15 +61,13 @@ class FootballRepositoryImpl @Inject constructor(
                 Resource.Success(data = api.getMatchByTeamId(id = id).toMatch())
             )
         } catch (e: IOException) {
-            emit(
-                Resource.Error(
-                    e.localizedMessage ?:
-                    application.getString(R.string.http_exception)
-                )
-            )
+            emit(Resource.Error(application.getString(R.string.connection_exception)))
         } catch (e: HttpException) {
             emit(
-                Resource.Error(application.getString(R.string.connection_exception))
+                Resource.Error(
+                    application.getString(R.string.http_exception)
+                )
+
             )
         }
     }
