@@ -8,7 +8,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.sanathcoding.footballeventapplication.core.common.TestTag.TEAM_LIST
 import com.sanathcoding.footballeventapplication.R
 import com.sanathcoding.footballeventapplication.mockserver.SuccessDispatcher
-import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen.base.BaseScreenTest
+import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.base.BaseScreenTest
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.InternalCoroutinesApi
 import org.junit.Test

@@ -4,7 +4,7 @@
     <string name="connection_exception">Could not reach the server, Please check you internet connection.</string>
     <string name="team_logo">Team Image</string>
     <string name="previous_match">Previous Match Results</string>
-    <string name="upcooming_match">UpComing Matches</string>
+    <string name="upcoming_match">UpComing Matches</string>
     <string name="alarm_in_sec">Trigger reminder in seconds</string>
     <string name="alarm_message">Message</string>
     <string name="channel_name">Football Notification</string>

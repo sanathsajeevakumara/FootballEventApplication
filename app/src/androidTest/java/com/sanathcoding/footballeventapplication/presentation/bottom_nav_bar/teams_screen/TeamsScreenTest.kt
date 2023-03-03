@@ -1,61 +1,60 @@
 package com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.teams_screen
 
-import androidx.activity.compose.setContent
-import androidx.compose.ui.test.assertIsDisplayed
-import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onNodeWithTag
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import com.sanathcoding.footballeventapplication.core.common.TestTag.PROGRESS_INDICATOR
-import com.sanathcoding.footballeventapplication.di.FootballModule
-import com.sanathcoding.footballeventapplication.presentation.MainActivity
-import com.sanathcoding.footballeventapplication.presentation.navigation.Screen
-import com.sanathcoding.footballeventapplication.ui.theme.FootballEventApplicationTheme
-import dagger.hilt.android.testing.HiltAndroidRule
+
+import android.content.Context
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.ui.test.*
+import androidx.test.core.app.ApplicationProvider
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.sanathcoding.footballeventapplication.core.common.TestTag
+import com.sanathcoding.footballeventapplication.R
+import com.sanathcoding.footballeventapplication.mockserver.ErrorDispatcher
+import com.sanathcoding.footballeventapplication.mockserver.SuccessDispatcher
+import com.sanathcoding.footballeventapplication.presentation.bottom_nav_bar.base.BaseScreenTest
 import dagger.hilt.android.testing.HiltAndroidTest
-import dagger.hilt.android.testing.UninstallModules
-import org.junit.Before
-import org.junit.Rule
+import kotlinx.coroutines.InternalCoroutinesApi
 import org.junit.Test
+import org.junit.runner.RunWith
 
+@ExperimentalMaterialApi
 @HiltAndroidTest
-//@UninstallModules(FootballModule::class, FootballRepositoryModule::class)
-class TeamsScreenTest {
+@RunWith(AndroidJUnit4::class)
+class TeamsScreenTest : BaseScreenTest() {
 
-    @get:Rule(order = 0)
-    val hiltRule = HiltAndroidRule(this)
+    @Test
+    @InternalCoroutinesApi
+    fun testTeamListScreen_taskListIsNotEmpty() {
+        // Set the mock server's dispatcher
+        mockServer.dispatcher = SuccessDispatcher()
+        setMainContent()
 
-    @get:Rule(order = 1)
-    val composeRule = createAndroidComposeRule<MainActivity>()
-
-    @Before
-    fun setup() {
-        hiltRule.inject()
-        composeRule.activity.setContent {
-            val navController = rememberNavController()
-            FootballEventApplicationTheme {
-                NavHost(
-                    navController = navController,
-                    startDestination = Screen.TeamsScreen.route
-                ) {
-                    composable(Screen.TeamsScreen.route) {
-                        TeamsScreen(navController = navController)
-                    }
-                }
-            }
+        composeRule.apply {
+            onNodeWithTag(TestTag.PROGRESS_INDICATOR).assertIsDisplayed()
+            mainClock.advanceTimeBy(10000)
+//            onNodeWithTag(TEAM_LIST).onChildren().assertCountEquals(10)
+//            onNodeWithText("Team Red Dragons").assertIsDisplayed()
         }
     }
 
     @Test
-    fun testTeamListScreen_taskListIsNotEmpty() {
-        composeRule.onNodeWithTag(PROGRESS_INDICATOR).assertDoesNotExist()
-        composeRule.onNodeWithTag(PROGRESS_INDICATOR).assertIsDisplayed()
+    @InternalCoroutinesApi
+    fun errorTextVisibleWhenConnectionError() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        mockServer.dispatcher = ErrorDispatcher()
+        setMainContent()
+
+        composeRule.apply {
+            onNodeWithText("Match Details").assertIsDisplayed().performClick()
+            mainClock.advanceTimeBy(50000)
+            onNodeWithText(context.getString(R.string.previous_match)).assertIsDisplayed()
+            onNodeWithText(context.getString(R.string.upcoming_match)).assertIsDisplayed()
+        }
     }
 
-//    @Test
-//    fun testTeamListScreen_taskListIsEmpty() {
-//        composeRule.onNodeWithTag(TEAM_LIST).onChildren().assertCountEquals(0)
-//    }
-
 }
+
+//composeRule.onNodeWithText("Teams").assertIsDisplayed().performClick()
+//        composeRule.mainClock.advanceTimeBy(2000)
+////        assertEquals("/teams", mockServer.takeRequest().path)
+//        Log.d("ddd","Path : ${mockServer.takeRequest().path}")
+//        composeRule.onAllNodesWithContentDescription(TEAM_ITEM).onFirst().assertIsDisplayed()

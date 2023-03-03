@@ -10,7 +10,7 @@ import dagger.hilt.testing.TestInstallIn
     components = [SingletonComponent::class],
     replaces = [FootballModule::class]
 )
-class MockFootballModule: FootballModule() {
+class FakeFootballModule: FootballModule() {
     override fun getBaseUrl(): String {
         return FootballValue.TEST_BASE_URL
     }
