@@ -1,32 +1,45 @@
 # FootballEventApplication
 This is a sample Football Event Application, This will retrieve and show avalabile Team list, Match list and each specific team details using API calls.
 
-## Technologies
+## Libraries Used :books:
 
-* Android Studio Electric Eel | 2022.1.1: Android Studio Version
-* MVVM Clean Archiecture: Used Application Archiecture.
-* ViewModel: Composable state management.
-* Compose: Toolkit for building native UI (in a declarative way - 100% Kotlin).
-* Coroutines: Library support for Kotlin coroutines.
-* Flows: Stream processing API, built on top of Coroutines.
-* Compose Navigation: for tabs navigation using Jetpack Compose.
-* Dagger Hilt: Dependency injection library for Android.
-* Retrofit: Type-safe REST client for Android to consume RESTful web services.
-* Espresso: Android UI Testing framework.
-* MockWebServer: A scriptable web server for testing HTTP clients, used for Instrumentation tests in this project.
-* Glide: Image downloading and caching library supported by Jetpack Compose.
-* Exoplayer : Video player and caching library supported by Jetpack Compose and developet by Google.
+* [Adroid Studio][11] Version: Android Studio Electric Eel | 2022.1.1
+* MVVM Clean Archiecture: Application Archiecture.
+* [ViewModel][10]: Composable state management.
+* [Compose][0]: Toolkit for building native UI (in a declarative way - 100% Kotlin).
+* [Coroutines][1]: Library support for Kotlin coroutines.
+* [Flows][2]: Stream processing API, built on top of Coroutines.
+* [Compose Navigation][3]: for tabs navigation using Jetpack Compose.
+* [Dagger Hilt][4]: Dependency injection library for Android.
+* [Retrofit][5]: Type-safe REST client for Android to consume RESTful web services.
+* [Espresso][6]: Android UI Testing framework.
+* [MockWebServer][7]: A scriptable web server for testing HTTP clients, used for Instrumentation tests in this project.
+* [Glide][8]: Image downloading and caching library supported by Jetpack Compose.
+* [Exoplayer][9] : Video player and caching library supported by Jetpack Compose and developet by Google.
 
-## Modules
+[0]:  https://developer.android.com/jetpack
+[1]:  https://github.com/Kotlin/kotlinx.coroutines
+[2]:  https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/
+[3]:  https://developer.android.com/jetpack/compose/navigation
+[4]:  https://dagger.dev/hilt/
+[5]:  https://github.com/square/retrofit
+[6]:  https://developer.android.com/training/testing/espresso/
+[7]:  https://github.com/square/okhttp/tree/master/mockwebserver
+[8]: https://github.com/bumptech/glide
+[9]: https://github.com/google/ExoPlayer
+[10]: https://developer.android.com/topic/libraries/architecture/viewmodel
+[11]: https://developer.android.com/studio
 
-* core - Module that contain files that can be accessible by other module from the project. 
-* data - Android module that can only access domain module.
-* domain - Kotlin module that cannot access any other module.
-* presentation - UI module that can only access by domain module.
-* di - DI module for preform dependecy the injection.
+## Package Structure :bookmark_tabs:
+
+* core - Package that contain files that can be accessible by other module from the project. 
+* data - Android Package that can only access domain module.
+* di - DI package for preform dependecy the injection.
+* domain - Package that cannot access any other module.
+* presentation - UI module that can only access by domain package.
 
 
-# App Preview
+# App Preview :octocat:
 
 https://user-images.githubusercontent.com/11756630/222366221-f48522f8-59e3-4008-8566-2c37262afb04.mp4
 
