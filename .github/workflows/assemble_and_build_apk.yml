@@ -1,0 +1,34 @@
+name: Assemble And Build APK
+on: [pull_request]
+jobs:
+  test_job:
+    name: Assemble
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+        
+      - name: Restore Cache
+        uses: actions/cache@v3.2.6
+        with: 
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: $[{ runner.os }]-gradle-$[{ hashFile('**/*.gradle*') }]
+          restore-key: |
+            $[{ runner.os }]-gradle-
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.10.0
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - name: Build With Gradle
+        run: ./gradlew build --no-daemon
+
+      - name: Upload Build APK
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: note_app_debug_apk
+          path: app/build/outputs/apk/debug/app-debug.apk
