@@ -1,11 +1,17 @@
 # FootballEventApplication
 This is a sample Football Event Application, This will retrieve and show avalabile Team list, Match list and each specific team details using API calls.
 
-## Libraries Used :books:
+## IDE And Architecture
 
 * [Adroid Studio][11] Version: Android Studio Electric Eel | 2022.1.1
 * MVVM Clean Archiecture: Application Archiecture.
 * [ViewModel][10]: Composable state management.
+
+[10]: https://developer.android.com/topic/libraries/architecture/viewmodel
+[11]: https://developer.android.com/studio
+
+## Libraries Used :books:
+
 * [Compose][0]: Toolkit for building native UI (in a declarative way - 100% Kotlin).
 * [Coroutines][1]: Library support for Kotlin coroutines.
 * [Flows][2]: Stream processing API, built on top of Coroutines.
@@ -27,8 +33,6 @@ This is a sample Football Event Application, This will retrieve and show avalabi
 [7]:  https://github.com/square/okhttp/tree/master/mockwebserver
 [8]: https://github.com/bumptech/glide
 [9]: https://github.com/google/ExoPlayer
-[10]: https://developer.android.com/topic/libraries/architecture/viewmodel
-[11]: https://developer.android.com/studio
 
 ## Package Structure :bookmark_tabs:
 
