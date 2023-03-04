@@ -47,9 +47,8 @@ class TeamsViewModel @Inject constructor(
                     }
                     is Resource.Error -> {
                         state = state.copy(
-//                            error = resource.message ?: application.getString(R.string.http_exception),
                             error = resource.message ?:
-                            "An Unexpected error occurred.",
+                            application.getString(R.string.http_exception),
                             isLoading = false,
                             team = emptyList()
                         )
