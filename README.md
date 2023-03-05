@@ -36,11 +36,11 @@ This is a sample Football Event Application, This will retrieve and show avalabi
 
 ## Package Structure :bookmark_tabs:
 
-* core - Package that contain files that can be accessible by other module from the project. 
-* data - Android Package that can only access domain module.
-* di - DI package for preform dependecy the injection.
-* domain - Package that cannot access any other module.
-* presentation - UI module that can only access by domain package.
+* core - Package that contains files that can be accessible by another package from the project. 
+* data - Data(Local or Remote) Package that can only access the domain package.
+* di - DI package for preform dependecy injection.
+* domain - The innermost layer. That can access other layers.
+* presentation - UI package that can only access the domain package.
 
 
 # App Preview :octocat:
