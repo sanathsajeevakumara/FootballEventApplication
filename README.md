@@ -1,11 +1,11 @@
 # FootballEventApplication
-This is a sample Football Event Application, This will retrieve and show avalabile Team list, Match list and each specific team details using API calls.
+This is a sample football event application that will retrieve and show the available team list, Match list, and each specific team's details using API calls.
 
 ## IDE And Architecture
 
 * [Adroid Studio][11] Version: Android Studio Electric Eel | 2022.1.1
-* MVVM Clean Archiecture: Application Archiecture.
-* [ViewModel][10]: Composable state management.
+* MVVM Clean Architecture: Application Architecture
+* [ViewModel][10]: Composable state management
 
 [10]: https://developer.android.com/topic/libraries/architecture/viewmodel
 [11]: https://developer.android.com/studio
@@ -18,10 +18,10 @@ This is a sample Football Event Application, This will retrieve and show avalabi
 * [Compose Navigation][3]: for tabs navigation using Jetpack Compose.
 * [Dagger Hilt][4]: Dependency injection library for Android.
 * [Retrofit][5]: Type-safe REST client for Android to consume RESTful web services.
-* [Espresso][6]: Android UI Testing framework.
+* [Espresso][6]: Android UI Testing Framework
 * [MockWebServer][7]: A scriptable web server for testing HTTP clients, used for Instrumentation tests in this project.
-* [Glide][8]: Image downloading and caching library supported by Jetpack Compose.
-* [Exoplayer][9] : Video player and caching library supported by Jetpack Compose and developet by Google.
+* [Glide][8]: Image downloading and caching library supported by Jetpack Compose
+* [Exoplayer][9]: Video player and caching library supported by Jetpack Compose and developed by Google.
 
 [0]:  https://developer.android.com/jetpack
 [1]:  https://github.com/Kotlin/kotlinx.coroutines
@@ -36,11 +36,11 @@ This is a sample Football Event Application, This will retrieve and show avalabi
 
 ## Package Structure :bookmark_tabs:
 
-* core - Package that contains files that can be accessible by another package from the project. 
-* data - Data(Local or Remote) Package that can only access the domain package.
-* di - DI package for preform dependecy injection.
-* domain - The innermost layer. That can access other layers.
-* presentation - UI package that can only access the domain package.
+* Core - a Package that contains files that can be accessed by another package from the project.
+* Data - Data(Local or Remote) Package that can only access the domain package.
+* DI - DI package for performing dependency injection.
+* Domain - The innermost layer. That can access other layers.
+* Presentation - UI package that can only access the domain package.
 
 
 # App Preview :octocat:
